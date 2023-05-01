@@ -9,9 +9,13 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        UberMapViewRepresentable()
-            .ignoresSafeArea()
-        
+        ZStack (alignment: .top) {
+            UberMapViewRepresentable()
+                .ignoresSafeArea()
+            
+            LocationSearchActivaitonView()
+                .padding(.top, 72)
+        }
     }
 }
 
